@@ -1,0 +1,23 @@
+name: Dataform
+
+on:
+  push:
+    branches:
+      - dev
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate repository
+        run: |
+          echo "GitHub Actions funcionando."
+          ls -la
+
+      - name: Success
+        run: echo "Pipeline finalizada com sucesso."
